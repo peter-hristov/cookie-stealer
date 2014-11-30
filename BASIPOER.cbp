@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="BASIPOER" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/BASIPOER" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-DCURL_STATICLIB" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-static" />
+					<Add library="curl" />
+					<Add library="rtmp" />
+					<Add library="idn" />
+					<Add library="ssl" />
+					<Add library="ssh2" />
+					<Add library="crypto" />
+					<Add library="z" />
+					<Add library="ws2_32" />
+					<Add library="wldap32" />
+					<Add library="winmm" />
+					<Add library="gdi32" />
+					<Add library="..\..\Boost\mingw\boost_1_57_0\stage\lib\libboost_filesystem-mgw47-mt-d-1_57.a" />
+					<Add library="..\..\Boost\mingw\boost_1_57_0\stage\lib\libboost_system-mgw47-mt-d-1_57.a" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/BASIPOER" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="../../Boost/mingw/boost_1_57_0" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-static" />
+					<Add library="curl" />
+					<Add library="rtmp" />
+					<Add library="idn" />
+					<Add library="ssl" />
+					<Add library="ssh2" />
+					<Add library="crypto" />
+					<Add library="z" />
+					<Add library="ws2_32" />
+					<Add library="wldap32" />
+					<Add library="winmm" />
+					<Add library="gdi32" />
+					<Add library="..\..\Boost\mingw\boost_1_57_0\stage\lib\libboost_filesystem-mgw47-mt-d-1_57.a" />
+					<Add library="..\..\Boost\mingw\boost_1_57_0\stage\lib\libboost_system-mgw47-mt-d-1_57.a" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+			<Add option="-DCURL_STATICLIB" />
+			<Add directory="../../Boost/mingw/boost_1_57_0" />
+		</Compiler>
+		<Linker>
+			<Add option="-static" />
+			<Add library="curl" />
+			<Add library="rtmp" />
+			<Add library="idn" />
+			<Add library="ssl" />
+			<Add library="ssh2" />
+			<Add library="crypto" />
+			<Add library="z" />
+			<Add library="ws2_32" />
+			<Add library="wldap32" />
+			<Add library="winmm" />
+			<Add library="gdi32" />
+			<Add library="..\..\Boost\mingw\boost_1_57_0\stage\lib\libboost_filesystem-mgw47-mt-d-1_57.a" />
+			<Add library="..\..\Boost\mingw\boost_1_57_0\stage\lib\libboost_system-mgw47-mt-d-1_57.a" />
+		</Linker>
+		<Unit filename="include/Cookie.h" />
+		<Unit filename="include/FilesystemWrapper.h" />
+		<Unit filename="include/SqliteWrapper.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="sqlite3.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="sqlite3.h" />
+		<Unit filename="src/Cookie.cpp" />
+		<Unit filename="src/FilesystemWrapper.cpp" />
+		<Unit filename="src/SqliteWrapper.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
